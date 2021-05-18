@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilosdetail.css">
+</head>
+<body>
+    <header>
+        <nav class=" purple lighten-1">
+            <div class="nav-wrapper container">
+                <a class="brand-logo left" href="#">Benditos</a>
+                  <a class="brand-logo sidenav-trigger center " href="#">
+                  <form action="">
+                      <div class="input-field">
+                      <input  id="search" type="search" name="search" placeholder="buscar...">
+                      <label class="label-icon" for="search"><i class="icon-search-1"></i></label>
+                      </div>
+                  </form>
+                   </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="icon-menu"></i></a>
+                <ul class=" hide-on-med-and-down right">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li>
+                      <form action="">
+                          <div class="input-field">
+                          <input   type="search1" name="search1" placeholder="buscar...">
+                          </div>
+                      </form>
+                  </li>
+                  <li><a href="usuario.html"><i class="icon-user "></i></a></li>
+                  <li><a href="cart.html"><i class="icon-basket"></i></a></li>
+                </ul>
+            </div>
+  
+            <ul class="sidenav" id="mobile-demo">
+              <li><a href="inicio"><i class="icon-home-1 right"></i>Inicio</a></li>
+              <li><a href="catalogo.html"><i class="icon-th right"></i> Catalogo</a></li>
+              <li><a href=""><i class="icon-heart right"></i> Nosotros</a></li>
+              <li><a href="#"><i class="icon-mail right"></i> Contacto</a></li>
+              <li><a href="usuario.html"><i class="icon-user right"></i>Mi cuenta</a></li>
+              <li><a href="cart.html"><i class="icon-basket right"></i>Tus compras</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="row detallecompleto">
+            <div class="col l6 m6 s12">
+                <div class="cont-img">
+                    <img src="assets/imagen_muestra2.jpg" alt="">
+                </div>
+            </div>
+            <div class="col l6 m6 s12">
+                <div class="cont-detail">
+                    <h1>Nombre del producto</h1>
+                    <p class="precio">$500.00</p>
+                    <p class="cantidad">Cantidad:</p>
+                    <div class="cant">
+                        <button class="btn-detail waves-effect red">-</button>
+                        <p>x1</p>
+                        <button class="btn-detail
+                        waves-effect green">+</button>
+                    </div>
+                    <button class="btn comprar waves-effect  purple lighten-1">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+body{
+    background: rgb(79, 45, 192);
+}
+.contslider{
+    width: 100%;
+    overflow: hidden;
+}
+.contslider ul{
+    display: flex;
+    width: 300%;
+    animation: cambio 20s infinite linear ;
+}
+.contslider li{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+.contslider img{
+    width: 100%;
+}
+@keyframes cambio{
+    0% {margin-left:0;}
+    28.3% {margin-left:0;}
+
+    33.3% {margin-left:-100%;}
+    61.6% {margin-left:-100%;}
+
+    66.6% {margin-left:-200%;}
+    94.9% {margin-left:-200%;}
+}
+
+/* 
+input[type=text]:not(.browser-default .control){
+    background-color: white;
+    height:inherit;
+    width: 500px;
+    
+} */
+.carr{
+    display: flex;
+}
