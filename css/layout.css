@@ -1,0 +1,62 @@
+body{
+    background: white;
+}
+.container{
+    width: 95%;
+}
+.sidenav .divider{
+    margin: 0%;
+}
+/* productos */
+.card .card-content{
+    padding: 2px;
+    text-align: center;
+}
+.card-content h5{
+    padding: 0%;
+    margin: 0%;
+    font-size: 14px;
+    color: gray;
+}
+.card-content p{
+    font-size: 20px;
+}
+.btn{
+    padding: 0%;
+    width: 100%;
+    padding-right: 8%;
+    margin-bottom: 4px;
+}
+.card-image{
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+}
+.overlay:hover{
+    background: black;
+    opacity: .2;
+}
+.contacto{
+    color: white;
+}
+.input-field{
+    padding: 0%;
+    margin: 0%;
+}
+.nav-wrapper .input-field input[type=search]{
+    border: 1px solid white;
+    height: 30px;
+    margin-top: 17px;
+    width: 80%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}

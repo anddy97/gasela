@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/estiloshome.css">
+    <link rel="stylesheet" href="css/layout.css">
+    
 </head>
 <body>
     <header>
@@ -17,40 +19,42 @@
                 <a class="brand-logo sidenav-trigger center " href="#">
                 <form action="">
                     <div class="input-field">
-                    <input  id="search" type="search" name="search" placeholder="buscar...">
-                    <label class="label-icon" for="search"><i class="icon-search-1"></i></label>
+                    <input class="nav-buscador"type="search" name="search" placeholder="buscar...">
                     </div>
                 </form>
                  </a>
               <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="icon-menu"></i></a>
               <ul class=" hide-on-med-and-down right">
-                  <li><a href="index.html">Inicio</a></li>
-                  <li><a href="catalogo.html">Catalogo</a></li>
-                  <li><a href="#">Nosotros </a></li>
-                  <li><a href="#">Contacto</a></li>
                   <li>
                     <form action="">
-                        <div class="input-field">
                         <input   type="search1" name="search1" placeholder="buscar...">
-                        </div>
                     </form>
                 </li>
+                  <li><a href="index.html">Inicio</a></li>
+                  <li><a href="catalogo.html">Catalogo</a></li>
+                  <li><a href="#">Contacto</a></li>
                 <li><a href="usuario.html"><i class="icon-user "></i></a></li>
-                <li><a class="carr" href="cart.html"><i class="icon-basket">12</i></a></li>
+                <li><a class="carr" href="cart.html"><i class="icon-basket">
+                        <span class="cart">0</span>
+                    </i></a></li>
               </ul>
           </div>
 
           <ul class="sidenav" id="mobile-demo">
             <li><a href="index.html"><i class="icon-home-1 right"></i>Inicio</a></li>
+            <div class="divider"></div>
             <li><a href="catalogo.html"><i class="icon-th right"></i> Catalogo</a></li>
-            <li><a href="#"><i class="icon-heart right"></i> Nosotros</a></li>
+            <div class="divider"></div>
             <li><a href="#"><i class="icon-mail right"></i> Contacto</a></li>
+            <div class="divider"></div>
             <li><a href="usuario.html"><i class="icon-user right"></i>Mi cuenta</a></li>
+            <div class="divider"></div>
             <li><a href="cart.html"><i class="icon-basket right"></i>Tus compras</a></li>
         </ul>
       </nav>
     </header>
     <main class="container" >
+        <!--------- portada ------>
             <div class="contslider">
                 <ul>
                     <li><img src="assets/fondo_1.png" alt=""></li>
@@ -58,6 +62,61 @@
                     <li><img src="assets/fondo_3.png" alt=""></li>
                 </ul>
             </div>
+            <div class="destacados">
+                <h2>Destacados</h2>
+            </div>
+            <!------- productos-destacados --------->
+            <div class="row">
+                <div class="col l3 m3 s6">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="detail.html">
+                                <img src="assets/imagen_muestra2.jpg" alt="">
+                                <div class="overlay"></div>
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <h5>Producto de muestra</h5>
+                            <p>Precio: $300.00</p>
+                            <a href="detail.html" class="waves-effect waves-light btn purple lighten-1"><i class="icon-basket right"></i>agregar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col l3 m3 s6">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="detail.html">
+                                <img src="assets/imagen_muestra2.jpg" alt="">
+                                <div class="overlay"></div>
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <h5>Producto de muestra</h5>
+                            <p>Precio: $300.00</p>
+                            <a href="detail.html" class="waves-effect waves-light btn purple lighten-1"><i class="icon-basket right"></i>agregar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col l3 m3 s6">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="detail.html">
+                                <img src="assets/imagen_muestra2.jpg" alt="">
+                                <div class="overlay"></div>
+                            </a>
+                        </div>
+                        <div class="card-content">
+                            <h5>Producto de muestra</h5>
+                            <p>Precio: $300.00</p>
+                            <a href="detail.html" class="waves-effect waves-light btn purple lighten-1"><i class="icon-basket right"></i>agregar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
     </main>
     <footer class="page-footer black">
       <div class="container">
@@ -67,12 +126,12 @@
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maxime earum deserunt cum nesciunt saepe nobis ad consequuntur commodi amet. Impedit aspernatur nihil non nostrum.</p>
               </div>
               <div class="col l6 m6 s6">
-                  <h5>Links</h5>
+                  <h5>Contacto</h5>
                   <ul>
-                      <li><a href="#">link 1</a></li>
-                      <li><a href="#">link 2</a></li>
-                      <li><a href="#">link 3</a></li>
-                      <li><a href="#">link 4</a></li>
+                      <li><a class="contacto" href="#"><i class="icon-facebook-squared"></i>Facebook</a></li>
+                      <li><a class="contacto" href="#"><i class="icon-instagram"></i>Instagram</a></li>
+                      <li><a class="contacto" href="#"><i class="icon-mail"></i>prueba@gmail.com</a></li>
+                      <li><a class="contacto" href="#"><i class="icon-phone"></i>1122334455</a></li>
                   </ul>
               </div>
           </div>
