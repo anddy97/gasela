@@ -51,12 +51,39 @@ body{
     padding: 0%;
     margin: 0%;
 }
-.nav-wrapper .input-field input[type=search]{
+input[type=search]:not(.browser-default .nav-buscador){
     border: 1px solid white;
     height: 30px;
-    margin-top: 17px;
+    margin-top: 15px;
     width: 80%;
     margin-left: 2%;
     margin-right: 2%;
+    padding-left: 5%;
+    border-radius: 8px;
+}
 
+.navegadorarriba{
+    height: 55px;
+    width: 100%;
+    background: #ab47bc;
+    text-align: center;
+    display: none;
+}
+.navegadorarriba h4{
+    padding-top: 10px;
+    margin: auto;
+    color: white;
+}
+@media screen and (max-width: 600px) {
+    .navegadorarriba{
+        display: block;
+    }
+    .brand-logo{
+        display: none;
+    }
+}
+.menu-respo{
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
