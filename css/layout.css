@@ -128,11 +128,10 @@ input[type=search]:not(.browser-default .nav-buscador){
     padding-right: 5px;
     font-family: sans-serif;
 }
+/* footer */
 .page-footer{
     background: black;
 }
-
-
 
 body {
     display: flex;
@@ -143,4 +142,23 @@ body {
   main {
     flex: 1 0 auto;
   }
-      
+/* boton de whatsapp */
+.whatsapp{
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    background: rgb(132, 194, 40);
+    color: rgb(236, 231, 231);
+    bottom: 15%;
+    right: 5%;
+    font-size: 30px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50px;
+    z-index: 100;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+}
+.whatsapp:hover{
+    background-color: rgb(236, 231, 231);
+    color: rgb(132, 194, 40);
+}
