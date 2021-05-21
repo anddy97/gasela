@@ -1,5 +1,24 @@
-body{
-    background: white;
+nav .brand-logo.logo{
+    background: black;
+    width: 120px;
+    text-align: center;
+    margin: 0%;
+    color: gold;
+    height: 100%;
+}
+.nav{
+   background: #ab47bc; 
+}
+.nav-deslizable{
+    background: #ab47bc;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #493240, #ab47bc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #493240, #ab47bc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.nav-deslizable li a{
+    color: white;
+}
+.nav-deslizable li a i{
+    color: white;
 }
 .container{
     width: 95%;
@@ -70,9 +89,16 @@ input[type=search]:not(.browser-default .nav-buscador){
     display: none;
 }
 .navegadorarriba h4{
-    padding-top: 10px;
-    margin: auto;
-    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: gold;
+    display: inline-block;
+
 }
 @media screen and (max-width: 600px) {
     .navegadorarriba{
@@ -87,3 +113,34 @@ input[type=search]:not(.browser-default .nav-buscador){
     top: 0;
     z-index: 5;
 }
+/* carrito */
+.carr{
+    display: flex;
+}
+.cart{
+    color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 15px;
+    background: black;
+    width: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: sans-serif;
+}
+.page-footer{
+    background: black;
+}
+
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+      
