@@ -85,24 +85,38 @@ input[type=search]:not(.browser-default .nav-buscador){
     height: 55px;
     width: 100%;
     background: #ab47bc;
-    text-align: center;
+    position: relative;
     display: none;
+    text-align: center;
+    padding: 5px 10px;
 }
 .navegadorarriba h4{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
     background: black;
-    margin-top: 5px;
-    margin-bottom: 5px;
     color: gold;
+    display: inline;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+.cont-icon-users, .cont-icon-cart .icon-basket.phone{
+    color: white;
+    font-size: 20px;
+}
+.cont-icon-users{
     display: inline-block;
-
+    position: absolute;
+    left: 20px;
+    top: 10px
+}
+.cont-icon-cart{
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top:10px;
 }
 @media screen and (max-width: 600px) {
     .navegadorarriba{
         display: block;
+        
     }
     .brand-logo{
         display: none;
@@ -162,3 +176,4 @@ body {
     background-color: rgb(236, 231, 231);
     color: rgb(132, 194, 40);
 }
+/* icon phones */
