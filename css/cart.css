@@ -35,6 +35,8 @@ img{
     background: transparent;
     display: flex;
     flex-direction: column;
+    border: 2px solid #ab47bc;
+    border-radius: 8px;
 }
 .card-content.pagar h5{
     color: white;
