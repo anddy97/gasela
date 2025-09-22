@@ -75,8 +75,8 @@ $allProducts = $conexion->getAll();
                     <ul>
                         <li><a class="contacto" href="#"><i class="icon-facebook-squared"></i>Facebook</a></li>
                         <li><a class="contacto" href="#"><i class="icon-instagram"></i>Instagram</a></li>
-                        <li><a class="contacto" href="#"><i class="icon-mail"></i>prueba@gmail.com</a></li>
-                        <li><a class="contacto" href="#"><i class="icon-phone"></i>1122334455</a></li>
+                        <li><a class="contacto" href="#"><i class="icon-mail"></i>gasela@gmail.com</a></li>
+                        <li><a class="contacto" href="#"><i class="icon-phone"></i>0800gasela</a></li>
                     </ul>
                 </div>
             </div>
