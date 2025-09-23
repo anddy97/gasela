@@ -11,7 +11,9 @@ $allProducts = $conexion->getAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gasela - Inicio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/estiloshome.css">
     <link rel="stylesheet" href="css/layout.css">
 
@@ -48,46 +50,19 @@ $allProducts = $conexion->getAll();
                         <h5>
                             <?php echo $key['nombreProducto'] ?>
                         </h5>
-                        <p>Precio:
+                        <p>Precio unidad:
                             <?php echo $key['precioMenor'] ?>
                         </p>
-                        <a href="detail.html" class="waves-effect waves-light btn purple lighten-1"><i
-                                class="icon-basket right"></i>agregar</a>
+                        <a href="detail.php" class="waves-effect waves-light btn light-blue darken-4"><i
+                                class="fa-solid fa-cart-shopping right"></i>agregar</a>
                     </div>
                 </div>
             </div>
             <?php endforeach; ?>
-            <!-- boton de whatsapp -->
-            <a href="#" class="whatsapp " target="_blank">
-                <i class="icon-whatsapp"></i>
-            </a>
+
     </main>
-    <footer class="page-footer ">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 m6 s6">
-                    <h5>footer Content</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maxime earum deserunt cum nesciunt
-                        saepe nobis ad consequuntur commodi amet. Impedit aspernatur nihil non nostrum.</p>
-                </div>
-                <div class="col l6 m6 s6">
-                    <h5>Contacto</h5>
-                    <ul>
-                        <li><a class="contacto" href="#"><i class="icon-facebook-squared"></i>Facebook</a></li>
-                        <li><a class="contacto" href="#"><i class="icon-instagram"></i>Instagram</a></li>
-                        <li><a class="contacto" href="#"><i class="icon-mail"></i>gasela@gmail.com</a></li>
-                        <li><a class="contacto" href="#"><i class="icon-phone"></i>0800gasela</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright grey darken-4">
-            <div class="container">
-                © 2021 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#">More Links</a>
-            </div>
-        </div>
-    </footer>
+    <!-- footer-->
+    <?php include("layout/footer.php"); ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/main.js"></script>

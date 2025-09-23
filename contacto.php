@@ -8,7 +8,9 @@
     <title>Gasela jeans - Contactos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/stylecontacto.css">
 </head>
@@ -44,7 +46,7 @@
                 <h4 class="center">Enviar mail</h4>
                 <div class="row ">
                     <div class=" input-field col l6 m6 s6">
-                        <i class="icon-user prefix"></i>
+                        <i class="fa-solid fa-user prefix"></i>
                         <input id="icon_name" type="text" class="validate" required>
                         <label for="icon_name"> Nombre:</label>
                     </div>
@@ -55,12 +57,12 @@
                 </div>
                 <div class="row">
                     <div class="input-field col l6 m6 s6">
-                        <i class="icon-phone prefix"></i>
+                        <i class="fa-solid fa-phone prefix"></i>
                         <input id="icon-telephone" type="number" class="validate" required>
                         <label for="icon-telephone">Telefono:</label>
                     </div>
                     <div class="input-field col l6 m6 s6">
-                        <i class="icon-at prefix"></i>
+                        <i class="fa-solid fa-envelope prefix"></i>
                         <input id="icon-mail" type="email" class="validate" required>
                         <label for="icon-mail">Email:</label>
                     </div>
@@ -73,7 +75,7 @@
                 </div>
                 <div class="row">
                     <div class="input-field col l12 m12 s12">
-                        <i class="icon-pencil prefix"></i>
+                        <i class="fa-solid fa-pen-to-square prefix"></i>
                         <textarea name="msjetexto" class="materialize-textarea" placeholder="Escribe tu msje:"
                             required></textarea>
                     </div>
@@ -83,39 +85,9 @@
                 </button>
             </form>
         </div>
-        <!-------- whatsapp ------->
-        <a href="#" class="whatsapp " target="_blank">
-            <i class="icon-whatsapp"></i>
-        </a>
     </main>
-
-    <footer class="page-footer ">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 m6 s6">
-                    <h5>footer Content</h5>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maxime earum deserunt cum nesciunt
-                        saepe nobis ad consequuntur commodi amet. Impedit aspernatur nihil non nostrum.</p>
-                </div>
-                <div class="col l6 m6 s6">
-                    <h5>Contacto</h5>
-                    <ul>
-                        <li><a class="contacto" href="#"><i class="icon-facebook-squared"></i>Facebook</a></li>
-                        <li><a class="contacto" href="#"><i class="icon-instagram"></i>Instagram</a></li>
-                        <li><a class="contacto" href="#"><i class="icon-mail"></i>prueba@gmail.com</a></li>
-                        <li><a class="contacto" href="#"><i class="icon-phone"></i>1122334455</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright grey darken-4">
-            <div class="container">
-                © 2021 Copyright Text
-                <a class="grey-text text-lighten-4 right" href="#">More Links</a>
-            </div>
-        </div>
-    </footer>
-
+    <!-- footer-->
+    <?php include("layout/footer.php"); ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/main.js"></script>

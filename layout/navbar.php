@@ -1,10 +1,10 @@
 <div class="navegadorarriba">
-    <a class="cont-icon-users" href="usuario.html">
-        <i class="icon-user"></i>
+    <a class="cont-icon-cart" href="cart.php">
+        <i class="fa-solid fa-bag-shopping"></i>0
     </a>
     <h4>Gasela</h4>
-    <a class="cont-icon-cart" href="cart.php">
-        <i class="icon-basket phone"><span class="cart">0</span></i>
+    <a class="cont-icon-users" href="usuario.php">
+        <i class="fa-solid fa-user"></i>
     </a>
 </div>
 <header class="menu-respo">
@@ -13,30 +13,30 @@
             <!-- logo ----->
             <a class="brand-logo left hide-on-med-and-down logo" href="index.php">Gasela</a>
             <!-- buscador -->
-            <a class="brand-logo sidenav-trigger left " href="index.php">
+
+            <!-- <a class="brand-logo sidenav-trigger left " href="index.php">
                 <form action="">
                     <div class="input-field">
-                        <input class="nav-buscador" type="search" name="search" placeholder="buscar...">
+                        <input class="nav-buscador" type="search" name="search" placeholder="search...">
                     </div>
                 </form>
-            </a>
+            </a> -->
+
             <!-- menu-phone -->
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="icon-menu"></i></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fa-solid fa-bars"></i></a>
             <ul class=" hide-on-med-and-down right">
-                <li>
+                <!-- <li>
                     <form action="">
                         <div class="input-field">
                             <input class="nav-buscador" type="search" name="search" placeholder="buscar...">
                         </div>
                     </form>
-                </li>
+                </li> -->
                 <li><a href="index.php">Inicio</a></li>
                 <li><a href="catalogo.php">Catalogo</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
-                <li><a href="usuario.php"><i class="icon-user "></i></a></li>
-                <li><a class="carr" href="cart.php"><i class="icon-basket">
-                            <span class="cart">0</span>
-                        </i></a></li>
+                <li><a href="usuario.php"><i class="fa-solid fa-user"></i></a></li>
+                <li><a class="carr" href="cart.php"><i class="fa-solid fa-bag-shopping"></i>0</a></li>
             </ul>
         </div>
 
@@ -52,5 +52,5 @@
     <div class="divider"></div>
     <li><a href="usuario.php"><i class="icon-user right"></i>Mis compras</a></li>
     <div class="divider"></div>
-    <li><a href="cart.php"><i class="icon-basket right"></i>Carrito</a></li>
+    <li><a href="cart.php"><i class="fa-solid fa-bag-shopping right"></i>Carrito</a></li>
 </ul>
