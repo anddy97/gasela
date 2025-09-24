@@ -2,7 +2,7 @@
     <a class="cont-icon-cart" href="cart.php">
         <i class="fa-solid fa-bag-shopping"></i>0
     </a>
-    <h4>Gasela</h4>
+    <a class="center" href=""><img src="assets/logo.jpg" alt=""></a>
     <a class="cont-icon-users" href="usuario.php">
         <i class="fa-solid fa-user"></i>
     </a>
@@ -11,7 +11,8 @@
     <nav class=" nav">
         <div class="nav-wrapper container">
             <!-- logo ----->
-            <a class="brand-logo left hide-on-med-and-down logo" href="index.php">Gasela</a>
+            <!-- <a class="brand-logo left hide-on-med-and-down logo" href="index.php">Gasela</a> -->
+            <a href="#" class="brand-logo left hide-on-med-and-down logo"><img src="assets/logo.jpg" alt=""></a>
             <!-- buscador -->
 
             <!-- <a class="brand-logo sidenav-trigger left " href="index.php">

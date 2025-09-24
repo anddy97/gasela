@@ -41,7 +41,7 @@ $allProducts = $conexion->getAll();
             <div class="col l3 m3 s6">
                 <div class="card">
                     <div class="card-image">
-                        <a href="detail.php">
+                        <a href="detail.php?product= <?php echo $key['nombreProducto'] ?> ">
                             <img src="assets/products/<?php echo $key['imagen'] ?> " alt="">
                             <div class="overlay"></div>
                         </a>
@@ -53,7 +53,7 @@ $allProducts = $conexion->getAll();
                         <p>Precio unidad:
                             <?php echo $key['precioMenor'] ?>
                         </p>
-                        <a href="detail.php" class="waves-effect waves-light btn light-blue darken-4"><i
+                        <a href="detail.php" class="waves-effect waves-light btn  indigo darken-4"><i
                                 class="fa-solid fa-cart-shopping right"></i>agregar</a>
                     </div>
                 </div>

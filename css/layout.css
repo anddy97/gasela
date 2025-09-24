@@ -1,19 +1,17 @@
 :root {
-  --color-principal: #1a69a6;
+  --color-principal: #0c2039;
 }
-nav .brand-logo.logo {
-  width: 120px;
-  text-align: center;
-  margin: 0%;
-  color: gold;
-  height: 100%;
-}
+
 .nav {
   background: var(--color-principal);
 }
 .nav-deslizable {
   background: var(--color-principal); /* fallback for old browsers */
   background: var(--color-principal);
+}
+.nav .nav-wrapper a img {
+  display: inline-block;
+  width: 365px;
 }
 .nav-deslizable li a {
   color: white;
@@ -90,13 +88,12 @@ input[type="search"]:not(.browser-default .nav-buscador) {
   text-align: center;
   padding: 5px 10px;
 }
-.navegadorarriba h4 {
-  background: black;
-  color: gold;
-  display: inline;
-  padding-top: 20px;
-  padding-bottom: 5px;
+.navegadorarriba a img {
+  display: inline-block;
+  width: 280px;
+  border: 1px solid var(--color-principal);
 }
+
 .cont-icon-users,
 .cont-icon-cart {
   color: white;

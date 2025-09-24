@@ -31,10 +31,10 @@
                     <p class="precio">$500.00</p>
                     <p class="cantidad">Cantidad:</p>
                     <div class="cant">
-                        <button class="btn-detail waves-effect black">-</button>
-                        <p>x1</p>
+                        <button class="btn-detail ">-</button>
+                        <p class="">x1</p>
                         <button class="btn-detail
-                        waves-effect black">+</button>
+                        ">+</button>
                     </div>
                     <select class="browser-default">
                         <option value="" disabled selected>Seleccione talla</option>
@@ -44,7 +44,7 @@
                         <option value="l">Xtra large</option>
                         <option value="l">2Xlarge</option>
                     </select>
-                    <a class="btn-comprar waves-effect  purple lighten-1" href="cart.html">Comprar</a>
+                    <a class="btn-comprar waves-effect  light-blue darken-4" href="cart.html">Comprar</a>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
                     <div class="card-content">
                         <h5>Producto de muestra</h5>
                         <p>Precio: $300.00</p>
-                        <a href="detail.html" class="waves-effect waves-light btn purple lighten-1"><i
+                        <a href="detail.html" class="waves-effect waves-light btn light-blue darken-4"><i
                                 class="icon-basket right"></i>agregar</a>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                     <div class="card-content">
                         <h5>Producto de muestra</h5>
                         <p>Precio: $300.00</p>
-                        <a href="detail.html" class="waves-effect waves-light btn purple lighten-1"><i
+                        <a href="detail.html" class="waves-effect waves-light btn light-blue darken-4"><i
                                 class="icon-basket right"></i>agregar</a>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                     <div class="card-content">
                         <h5>Producto de muestra</h5>
                         <p>Precio: $300.00</p>
-                        <a href="detail.html" class="waves-effect waves-light btn purple lighten-1"><i
+                        <a href="detail.html" class="waves-effect waves-light btn light-blue darken-4"><i
                                 class="icon-basket right"></i>agregar</a>
                     </div>
                 </div>
