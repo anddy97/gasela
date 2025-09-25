@@ -43,11 +43,11 @@ class conexion
         return $productos;
     }
 
-    public function getProduct($id)
+    public function getProduct($name)
     {
-        $ident = $id;
-        $sentencia = $this->conexion->prepare("SELECT * FROM productos WHERE id = ?");
-        $sentencia->bind_param("i", $ident);
+        $ident = $name;
+        $sentencia = $this->conexion->prepare("SELECT * FROM productos WHERE TRIM(LOWER(nombreProducto)) = TRIM(LOWER(?))");
+        $sentencia->bind_param("s", $ident);
         $sentencia->execute();
         $resultado = $sentencia->get_result();
         $fila = $resultado->fetch_assoc();

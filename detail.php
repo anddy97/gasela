@@ -1,3 +1,17 @@
+<?php
+if (!isset($_GET['product']) || empty($_GET['product'])) {
+    header("Location: index.php");
+    exit();
+}
+$producto = $_GET['product'];
+
+include_once("back/bd/conexion.php");
+$conexion = new conexion;
+$detailProduct = $conexion->getProduct($producto);
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,7 +19,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOKETA jeans - Detalle</title>
+    <title>GASELA - Detalle</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -21,14 +35,14 @@
         <div class="row detallecompleto">
             <div class="col l6 m6 s12">
                 <div class="cont-img">
-                    <img src="assets/imagen_muestra2.jpg" alt="">
+                    <img src="assets/products/<?php echo htmlspecialchars($detailProduct['imagen']); ?>" alt="">
                 </div>
             </div>
             <!------- texto-detalle ------>
             <div class="col l6 m6 s12">
                 <div class="cont-detail">
-                    <h1>Nombre del producto</h1>
-                    <p class="precio">$500.00</p>
+                    <h1><?php echo htmlspecialchars($detailProduct['nombreProducto']); ?></h1>
+                    <p class="precio">$<?php echo htmlspecialchars($detailProduct['precioMenor']); ?></p>
                     <p class="cantidad">Cantidad:</p>
                     <div class="cant">
                         <button class="btn-detail ">-</button>
@@ -44,7 +58,7 @@
                         <option value="l">Xtra large</option>
                         <option value="l">2Xlarge</option>
                     </select>
-                    <a class="btn-comprar waves-effect  light-blue darken-4" href="cart.html">Comprar</a>
+                    <a class="btn-comprar waves-effect  light-blue darken-4" href="cart.php">Comprar</a>
                 </div>
             </div>
         </div>
