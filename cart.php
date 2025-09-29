@@ -1,3 +1,51 @@
+<?php
+include_once("back/bd/conexion.php");
+include_once("back/carrito.php");
+
+
+session_start();
+if (isset($_POST['idproducto'], $_POST['tallaproducto'], $_POST['cantidadproducto'])) {
+  $id = $_POST['idproducto'];
+  $talla = $_POST['tallaproducto'];
+  $cantidad = $_POST['cantidadproducto'];
+
+  $conexion = new conexion();
+  $productBD = $conexion->getProduct($id);
+
+  $productNuevo = array(
+    'ID' => $id,
+    'NOMBRE' => $productBD['nombreProducto'],
+    'PRECIO' => $productBD['precioMenor'],
+    'CANTIDAD' => $cantidad,
+    'TALLA' => $talla,
+    'IMAGEN' => $productBD['imagen']
+  );
+}
+
+$productoEncontrado = false;
+
+if (!isset($_SESSION['cart'])) {
+  $_SESSION['cart'] = [];
+}
+
+// Buscar si el producto ya existe (mismo ID y talla)
+foreach ($_SESSION['cart'] as &$product) {
+  if ($product['ID'] === $id && $product['TALLA'] === $talla) {
+    $product['CANTIDAD'] += $cantidad;
+    $productoEncontrado = true;
+    break;
+  }
+}
+
+// Si no se encontró, agregar el nuevo producto al carrito
+if (!$productoEncontrado) {
+  $_SESSION['cart'][] = $productNuevo;
+}
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,6 +66,7 @@
   <!-- navbar -->
   <?php include('layout/navbar.php'); ?>
   <main>
+    <!-- productos del carrito -->
     <div class="row">
       <div class="col l9 m9 s12">
         <table class="centered ">
@@ -32,17 +81,17 @@
           </thead>
 
           <tbody>
-            <tr>
-              <td><img src="assets/imagen_muestra.jpg" alt=""></td>
-              <td>Producto de prueba</td>
-              <td>2xl</td>
-              <td>
-                <button class="boton-cant waves-effect restar">-</button>
-                x1
-                <button class="boton-cant waves-effect sumar">+</button>
-              </td>
-              <td>$1000.00 <i class="icon-trash-empty waves-effect"></i></td>
-            </tr>
+            <?php foreach ($_SESSION['cart'] as $key): ?>
+              <tr>
+                <td><img src="assets/products/<?= htmlspecialchars($key['IMAGEN']) ?>" alt=""></td>
+                <td><?= htmlspecialchars($key['NOMBRE']) ?></td>
+                <td><?= htmlspecialchars($key['TALLA']) ?></td>
+                <td>
+                  <?= htmlspecialchars($key['CANTIDAD']) ?>
+                </td>
+                <td><?= htmlspecialchars($key['PRECIO'] * $key['CANTIDAD']) ?><i class="fa-solid fa-trash"></i></td>
+              </tr>
+            <?php endforeach ?>
           </tbody>
         </table>
       </div>
@@ -54,7 +103,8 @@
               <h5>Resumen de compra</h5>
               <div class="cont-resumen">
                 <p>Sub total:</p>
-                <p>$1000</p>
+                <p>$subtotal
+                </p>
               </div>
               <div class="cont-resumen">
                 <p>Envio:</p>
@@ -75,32 +125,7 @@
 
   </main>
 
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 m6 s6">
-          <h5>footer Content</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta maxime earum deserunt cum nesciunt saepe
-            nobis ad consequuntur commodi amet. Impedit aspernatur nihil non nostrum.</p>
-        </div>
-        <div class="col l6 m6 s6">
-          <h5>Contacto</h5>
-          <ul>
-            <li><a class="contacto" href="#"><i class="icon-facebook-squared"></i>Facebook</a></li>
-            <li><a class="contacto" href="#"><i class="icon-instagram"></i>Instagram</a></li>
-            <li><a class="contacto" href="#"><i class="icon-mail"></i>prueba@gmail.com</a></li>
-            <li><a class="contacto" href="#"><i class="icon-phone"></i>1122334455</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright grey darken-4">
-      <div class="container">
-        © 2021 Copyright Text
-        <a class="grey-text text-lighten-4 right" href="#">More Links</a>
-      </div>
-    </div>
-  </footer>
+  <?php include("layout/footer.php"); ?>
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -36,8 +36,9 @@
 .cant {
   display: flex;
   flex-direction: row;
+  margin-bottom: 15px;
 }
-.cant p {
+.cant #contador-product {
   background-color: var(--color-principal);
   width: 25px;
   height: 25px;
@@ -45,6 +46,7 @@
   margin-left: 10px;
   padding-left: 4px;
   color: white;
+  border: none;
 }
 .cant .btn-detail {
   width: 25px;
@@ -63,6 +65,7 @@
   width: 180px;
   color: white;
   border: 2px solid var(--color-principal);
+  background-color: var(--color-principal);
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 5px;

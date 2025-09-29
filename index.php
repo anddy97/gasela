@@ -41,7 +41,7 @@ $allProducts = $conexion->getAll();
             <div class="col l3 m3 s6">
                 <div class="card">
                     <div class="card-image">
-                        <a href="detail.php?product= <?php echo $key['nombreProducto'] ?> ">
+                        <a href="detail.php?product= <?php echo $key['id'] ?> ">
                             <img src="assets/products/<?php echo $key['imagen'] ?> " alt="">
                             <div class="overlay"></div>
                         </a>

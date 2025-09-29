@@ -8,7 +8,7 @@ $producto = $_GET['product'];
 include_once("back/bd/conexion.php");
 $conexion = new conexion;
 $detailProduct = $conexion->getProduct($producto);
-
+session_start();
 
 
 ?>
@@ -39,29 +39,35 @@ $detailProduct = $conexion->getProduct($producto);
                 </div>
             </div>
             <!------- texto-detalle ------>
-            <div class="col l6 m6 s12">
-                <div class="cont-detail">
-                    <h1><?php echo htmlspecialchars($detailProduct['nombreProducto']); ?></h1>
-                    <p class="precio">$<?php echo htmlspecialchars($detailProduct['precioMenor']); ?></p>
-                    <p class="cantidad">Cantidad:</p>
-                    <div class="cant">
-                        <button class="btn-detail ">-</button>
-                        <p class="">x1</p>
-                        <button class="btn-detail
-                        ">+</button>
+            <form id="formdatos" action="cart.php" method="post">
+                <div class="col l6 m6 s12">
+                    <div class="cont-detail">
+                        <h1><?php echo htmlspecialchars($detailProduct['nombreProducto']); ?></h1>
+                        <p class="precio">$<?php echo htmlspecialchars($detailProduct['precioMenor']); ?></p>
+                        <p class="cantidad">Cantidad:</p>
+                        <div class="cant">
+                            <button type="button" class="btn-detail " id="btn-restar-cont">-</button>
+                            <input type="text" id="contador-product" value="1" readonly name="cantidadproducto">
+                            <button type="button" class="btn-detail
+                        " id="btn-sumar-cont">+</button>
+                        </div>
+                        <select class="browser-default" name="tallaproducto">
+                            <option value="" disabled selected>Seleccione talla</option>
+                            <option value="s">Small</option>
+                            <option value="m">Medium</option>
+                            <option value="l">Large</option>
+                            <option value="l">Xtra large</option>
+                            <option value="l">2Xlarge</option>
+                        </select>
+                        <input type="hidden" name="idproducto"
+                            value="<?php echo htmlspecialchars($detailProduct['id']); ?>">
+                        <button type="submit" name="btn-submit"
+                            class="btn-comprar waves-effect waves-light indigo darken-4">Agregar</button>
                     </div>
-                    <select class="browser-default">
-                        <option value="" disabled selected>Seleccione talla</option>
-                        <option value="s">Small</option>
-                        <option value="m">Medium</option>
-                        <option value="l">Large</option>
-                        <option value="l">Xtra large</option>
-                        <option value="l">2Xlarge</option>
-                    </select>
-                    <a class="btn-comprar waves-effect  light-blue darken-4" href="cart.php">Comprar</a>
                 </div>
-            </div>
+            </form>
         </div>
+
         <!----------- productos-relacionados --------->
         <div class="productos-relacionados">
             <h2>Productos relacionados</h2>
@@ -127,6 +133,7 @@ $detailProduct = $conexion->getProduct($producto);
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/detail.js"></script>
 
 </body>
 

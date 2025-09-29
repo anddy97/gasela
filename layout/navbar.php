@@ -45,13 +45,15 @@
 </header>
 
 <ul class="sidenav nav-deslizable" id="mobile-demo">
-    <li><a href="index.php"><i class="icon-home-1 right"></i>Inicio</a></li>
+    <li><a href="index.php"><i class="fa-solid fa-house right"></i>Inicio</a></li>
     <div class="divider"></div>
-    <li><a href="catalogo.php"><i class="icon-th right"></i> Catalogo</a></li>
+    <li><a href="catalogo.php"><i class="fa-solid fa-shirt right"></i> Catalogo</a></li>
     <div class="divider"></div>
-    <li><a href="contacto.php"><i class="icon-mail right"></i>Contacto</a></li>
+    <li><a href="contacto.php">
+            <<i class="fa-solid fa-square-phone right"></i>Contacto
+        </a></li>
     <div class="divider"></div>
-    <li><a href="usuario.php"><i class="icon-user right"></i>Mis compras</a></li>
+    <li><a href="usuario.php"><i class="fa-solid fa-user right"></i>Mis compras</a></li>
     <div class="divider"></div>
     <li><a href="cart.php"><i class="fa-solid fa-bag-shopping right"></i>Carrito</a></li>
 </ul>
