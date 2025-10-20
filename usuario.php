@@ -47,7 +47,7 @@
                             <span>Aceptar terminos y condiciones</span>
                         </label>
                     </p>
-                    <button class="btn purple lighten-1">Crear</button>
+                    <button class="btn black lighten-1">Crear</button>
                 </form><br>
                 <a href="#">Leer terminos y conidiciones</a>
             </div>
@@ -62,7 +62,7 @@
                         <i class="icon-key prefix"></i>
                         <input type="password" name="in_pass" placeholder="Ingrese contraseña">
                     </div>
-                    <button class="btn purple lighten-1">Ingresar</button><br><br>
+                    <button class="btn black lighten-1">Ingresar</button><br><br>
                     <a href="#">¿olvidaste tu contraseña?</a>
                 </form>
             </div>

@@ -39,7 +39,7 @@ session_start();
                 </div>
             </div>
             <!------- texto-detalle ------>
-            <form id="formdatos" action="cart.php" method="post">
+            <form id="formdatos" action="cart.php" method="POST">
                 <div class="col l6 m6 s12">
                     <div class="cont-detail">
                         <h1><?php echo htmlspecialchars($detailProduct['nombreProducto']); ?></h1>
@@ -51,16 +51,26 @@ session_start();
                             <button type="button" class="btn-detail
                         " id="btn-sumar-cont">+</button>
                         </div>
-                        <select class="browser-default" name="tallaproducto">
-                            <option value="" disabled selected>Seleccione talla</option>
-                            <option value="s">Small</option>
-                            <option value="m">Medium</option>
-                            <option value="l">Large</option>
-                            <option value="l">Xtra large</option>
-                            <option value="l">2Xlarge</option>
+                        <select class="browser-default" name="tallaproducto" id="talla">
+                            <option disabled selected value="null">Seleccione talla</option>
+                            <option value="S">Small</option>
+                            <option value="M">Medium</option>
+                            <option value="L">Large</option>
+                            <option value="XL">Xtra large</option>
+                            <option value="XXL">2Xlarge</option>
                         </select>
                         <input type="hidden" name="idproducto"
                             value="<?php echo htmlspecialchars($detailProduct['id']); ?>">
+                        <input type="hidden" name="imagenproducto"
+                            value="<?php echo htmlspecialchars($detailProduct['imagen']); ?>">
+
+                        <input type="hidden" name="precioproducto"
+                            value="<?php echo htmlspecialchars($detailProduct['precioMenor']); ?>">
+
+                        <input type="hidden" name="nombreproducto"
+                            value="<?php echo htmlspecialchars($detailProduct['nombreProducto']); ?>">
+
+
                         <button type="submit" name="btn-submit"
                             class="btn-comprar waves-effect waves-light indigo darken-4">Agregar</button>
                     </div>
@@ -84,7 +94,7 @@ session_start();
                     <div class="card-content">
                         <h5>Producto de muestra</h5>
                         <p>Precio: $300.00</p>
-                        <a href="detail.html" class="waves-effect waves-light btn light-blue darken-4"><i
+                        <a href="detail.html" class="waves-effect waves-light btn black darken-4"><i
                                 class="icon-basket right"></i>agregar</a>
                     </div>
                 </div>
@@ -101,7 +111,7 @@ session_start();
                     <div class="card-content">
                         <h5>Producto de muestra</h5>
                         <p>Precio: $300.00</p>
-                        <a href="detail.html" class="waves-effect waves-light btn light-blue darken-4"><i
+                        <a href="detail.html" class="waves-effect waves-light btn black darken-4"><i
                                 class="icon-basket right"></i>agregar</a>
                     </div>
                 </div>
@@ -118,7 +128,7 @@ session_start();
                     <div class="card-content">
                         <h5>Producto de muestra</h5>
                         <p>Precio: $300.00</p>
-                        <a href="detail.html" class="waves-effect waves-light btn light-blue darken-4"><i
+                        <a href="detail.html" class="waves-effect waves-light btn black darken-4"><i
                                 class="icon-basket right"></i>agregar</a>
                     </div>
                 </div>

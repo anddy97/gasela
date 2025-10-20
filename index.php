@@ -50,7 +50,7 @@ $allProducts = $conexion->getAll();
                         <h5>
                             <?php echo $key['nombreProducto'] ?>
                         </h5>
-                        <p>Precio unidad:
+                        <p>Precio:
                             <?php echo $key['precioMenor'] ?>
                         </p>
                         <a href="detail.php" class="waves-effect waves-light btn  indigo darken-4"><i

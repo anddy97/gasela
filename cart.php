@@ -1,47 +1,5 @@
 <?php
-include_once("back/bd/conexion.php");
-include_once("back/carrito.php");
-
-
 session_start();
-if (isset($_POST['idproducto'], $_POST['tallaproducto'], $_POST['cantidadproducto'])) {
-  $id = $_POST['idproducto'];
-  $talla = $_POST['tallaproducto'];
-  $cantidad = $_POST['cantidadproducto'];
-
-  $conexion = new conexion();
-  $productBD = $conexion->getProduct($id);
-
-  $productNuevo = array(
-    'ID' => $id,
-    'NOMBRE' => $productBD['nombreProducto'],
-    'PRECIO' => $productBD['precioMenor'],
-    'CANTIDAD' => $cantidad,
-    'TALLA' => $talla,
-    'IMAGEN' => $productBD['imagen']
-  );
-}
-
-$productoEncontrado = false;
-
-if (!isset($_SESSION['cart'])) {
-  $_SESSION['cart'] = [];
-}
-
-// Buscar si el producto ya existe (mismo ID y talla)
-foreach ($_SESSION['cart'] as &$product) {
-  if ($product['ID'] === $id && $product['TALLA'] === $talla) {
-    $product['CANTIDAD'] += $cantidad;
-    $productoEncontrado = true;
-    break;
-  }
-}
-
-// Si no se encontró, agregar el nuevo producto al carrito
-if (!$productoEncontrado) {
-  $_SESSION['cart'][] = $productNuevo;
-}
-
 
 
 ?>
@@ -68,7 +26,7 @@ if (!$productoEncontrado) {
   <main>
     <!-- productos del carrito -->
     <div class="row">
-      <div class="col l9 m9 s12">
+      <div class="col l9 m9 s12" id="tab">
         <table class="centered ">
           <thead>
             <tr>
@@ -80,20 +38,11 @@ if (!$productoEncontrado) {
             </tr>
           </thead>
 
-          <tbody>
-            <?php foreach ($_SESSION['cart'] as $key): ?>
-              <tr>
-                <td><img src="assets/products/<?= htmlspecialchars($key['IMAGEN']) ?>" alt=""></td>
-                <td><?= htmlspecialchars($key['NOMBRE']) ?></td>
-                <td><?= htmlspecialchars($key['TALLA']) ?></td>
-                <td>
-                  <?= htmlspecialchars($key['CANTIDAD']) ?>
-                </td>
-                <td><?= htmlspecialchars($key['PRECIO'] * $key['CANTIDAD']) ?><i class="fa-solid fa-trash"></i></td>
-              </tr>
-            <?php endforeach ?>
+          <tbody id="filaCart">
+
           </tbody>
         </table>
+        <!-- <p style="text-align:center;">No hay productos que mostrar</p> -->
       </div>
       <!----- total a pagar ----->
       <div class="col l3 m3 s12">
@@ -130,6 +79,7 @@ if (!$productoEncontrado) {
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="scripts/main.js"></script>
+  <script src="scripts/carrito.js"></script>
 </body>
 
 </html>

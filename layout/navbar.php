@@ -1,6 +1,7 @@
 <div class="navegadorarriba">
     <a class="cont-icon-cart" href="cart.php">
-        <i class="fa-solid fa-bag-shopping"></i>0
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cantidad-carrito"></span>
     </a>
     <a class="center" href=""><img src="assets/logo.jpg" alt=""></a>
     <a class="cont-icon-users" href="usuario.php">
@@ -37,7 +38,8 @@
                 <li><a href="catalogo.php">Catalogo</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
                 <li><a href="usuario.php"><i class="fa-solid fa-user"></i></a></li>
-                <li><a class="carr" href="cart.php"><i class="fa-solid fa-bag-shopping"></i>0</a></li>
+                <li><a class="carr" href="cart.php"><i class="fa-solid fa-bag-shopping"></i><span
+                            class="cantidad-carrito"></span></a></li>
             </ul>
         </div>
 
