@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  M.AutoInit();
   var elems = document.querySelectorAll(".sidenav");
   var instances = M.Sidenav.init(elems, {
-    edge: "right",
+    edge: "left",
   });
 });
-
 fetch("./back/cartshop.php")
   .then((res) => res.json())
   .then((data) => {

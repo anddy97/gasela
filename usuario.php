@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KOKETA jeans - Ingresar</title>
+    <title>Gasela - Ingresar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -28,18 +28,24 @@
             </div>
             <!------------ REGISTRARSE ---------------->
             <div class="col offset-l4 l4 offset-m4 m4 s12" id="registrarse">
-                <form action="">
+                <form action="back/sesions.php" method="POST" id="registrar">
                     <div class="input-field">
-                        <i class="icon-user prefix"></i>
-                        <input type="text" name="registrar_usuario" placeholder="Crear usuario">
+                        <input type="text" name="registrar_nombre" placeholder="Nombre:">
                     </div>
                     <div class="input-field">
-                        <i class="icon-key prefix"></i>
-                        <input type="password" name="registrar_pass" placeholder="Crear contraseña">
+                        <input type="text" name="registrar_apellido" placeholder="Apellido:">
                     </div>
                     <div class="input-field">
-                        <i class="icon-key prefix"></i>
-                        <input type="password" name="pass_repeat" placeholder="Repetir la contraseña">
+                        <input type="email" name="registrar_email" placeholder="Email:">
+                    </div>
+                    <div class="input-field">
+                        <input type="tel" name="registrar_telefono" placeholder="Telefono:">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="registrar_password" placeholder="Contraseña:">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="pass_repeat" placeholder="Repetir contraseña:">
                     </div>
                     <p>
                         <label>
@@ -47,7 +53,7 @@
                             <span>Aceptar terminos y condiciones</span>
                         </label>
                     </p>
-                    <button class="btn black lighten-1">Crear</button>
+                    <button class="btn black lighten-1">Registrarme</button>
                 </form><br>
                 <a href="#">Leer terminos y conidiciones</a>
             </div>
@@ -56,11 +62,11 @@
                 <form action="">
                     <div class="input-field">
                         <i class="icon-user prefix"></i>
-                        <input type="text" name="in_usuario" placeholder="Ingrese usuario o mail">
+                        <input type="text" name="in_usuario" placeholder="Email">
                     </div>
                     <div class="input-field">
                         <i class="icon-key prefix"></i>
-                        <input type="password" name="in_pass" placeholder="Ingrese contraseña">
+                        <input type="password" name="in_pass" placeholder="Contraseña">
                     </div>
                     <button class="btn black lighten-1">Ingresar</button><br><br>
                     <a href="#">¿olvidaste tu contraseña?</a>

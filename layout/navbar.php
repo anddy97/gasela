@@ -52,7 +52,7 @@
     <li><a href="catalogo.php"><i class="fa-solid fa-shirt right"></i> Catalogo</a></li>
     <div class="divider"></div>
     <li><a href="contacto.php">
-            <<i class="fa-solid fa-square-phone right"></i>Contacto
+            <i class="fa-solid fa-square-phone right"></i>Contacto
         </a></li>
     <div class="divider"></div>
     <li><a href="usuario.php"><i class="fa-solid fa-user right"></i>Mis compras</a></li>
