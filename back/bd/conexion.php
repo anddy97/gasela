@@ -54,7 +54,16 @@ class conexion
         return $fila;
     }
 
+    public function addUser($nombre, $apellido, $mail, $telefono, $password, $estado)
+    {
+        $sentencia = $this->conexion->prepare("INSERT INTO usuarios (nombre, apellido, mail, telefono, password, estado) VALUES (?, ?, ?, ?, ?, ?)");
+        $sentencia->bind_param("ssssss", $nombre, $apellido, $mail, $telefono, $password, $estado);
+        $sentencia->execute();
 
+        $id_ingresado = $this->conexion->insert_id;
+
+        return $id_ingresado;
+    }
 
 
 }

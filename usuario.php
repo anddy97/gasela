@@ -28,7 +28,7 @@
             </div>
             <!------------ REGISTRARSE ---------------->
             <div class="col offset-l4 l4 offset-m4 m4 s12" id="registrarse">
-                <form action="back/sesions.php" method="POST" id="registrar">
+                <form method="POST" id="registrar">
                     <div class="input-field">
                         <input type="text" name="registrar_nombre" placeholder="Nombre:">
                     </div>
@@ -53,7 +53,7 @@
                             <span>Aceptar terminos y condiciones</span>
                         </label>
                     </p>
-                    <button class="btn black lighten-1">Registrarme</button>
+                    <button type="submit" class="btn black lighten-1">Registrarme</button>
                 </form><br>
                 <a href="#">Leer terminos y conidiciones</a>
             </div>
@@ -77,8 +77,8 @@
     <!-- footer-->
     <?php include("layout/footer.php"); ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="scripts/usuario.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/usuario.js"></script>
 </body>
 
 </html>
