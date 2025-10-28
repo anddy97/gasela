@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: usuario.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +28,6 @@
     <ul id="tabs-swipe-demo" class="tabs">
         <li class="tab col s3"><a href="#test-swipe-1" class="active">Mis compras</a></li>
         <li class="tab col s3"><a href="#test-swipe-2">Mis datos</a></li>
-        <li class="tab col s3"><a href="#test-swipe-3">Cerrar Sesion</a></li>
     </ul>
     <div id="test-swipe-1" class="col s12">
         <p>producto:</p>
@@ -29,15 +36,12 @@
         <p>valor</p>
     </div>
     <div id="test-swipe-2" class="col s12">
-        <p>Nombre:Juan</p>
-        <p>Apellido:Nada</p>
-        <p>Mail:Juanada@gmail.com</p>
-        <p>Telefono:1123558877</p>
+        <p>Nombre: <?php echo htmlspecialchars($_SESSION['usuario']['NOMBRE']); ?></p>
+        <p>Apellido: <?php echo htmlspecialchars($_SESSION['usuario']['APELLIDO']); ?></p>
+        <p>Mail: <?php echo htmlspecialchars($_SESSION['usuario']['MAIL']); ?></p>
+        <p>Telefono: <?php echo htmlspecialchars($_SESSION['usuario']['TELEFONO']); ?></p>
     </div>
-
-
-
-
+    <a class="waves-effect waves-light btn-small" href="logout.php">Cerrar Session</a>
     <script src="scripts/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>

@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (isset($_SESSION['usuario'])) {
+    header("Location: dashboard.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -59,7 +67,7 @@
             </div>
             <!----------- INGRESSAR ------------>
             <div class="col offset-l4 l4 offset-m4 m4 s12" id="entrar">
-                <form action="">
+                <form id="InicioSesion" method="POSt">
                     <div class="input-field">
                         <i class="icon-user prefix"></i>
                         <input type="text" name="in_usuario" placeholder="Email">

@@ -39,7 +39,7 @@ class conexion
         $sentencia->execute();
         $resultado = $sentencia->get_result();
         $productos = $resultado->fetch_all(MYSQLI_ASSOC);
-
+        $sentencia->close();
         return $productos;
     }
 
@@ -51,18 +51,52 @@ class conexion
         $sentencia->execute();
         $resultado = $sentencia->get_result();
         $fila = $resultado->fetch_assoc();
+        $sentencia->close();
         return $fila;
     }
 
     public function addUser($nombre, $apellido, $mail, $telefono, $password, $estado)
     {
+        $passHash = password_hash($password, PASSWORD_DEFAULT);
         $sentencia = $this->conexion->prepare("INSERT INTO usuarios (nombre, apellido, mail, telefono, password, estado) VALUES (?, ?, ?, ?, ?, ?)");
-        $sentencia->bind_param("ssssss", $nombre, $apellido, $mail, $telefono, $password, $estado);
+        $sentencia->bind_param("ssssss", $nombre, $apellido, $mail, $telefono, $passHash, $estado);
         $sentencia->execute();
 
         $id_ingresado = $this->conexion->insert_id;
-
+        $sentencia->close();
         return $id_ingresado;
+    }
+
+    public function verifyMailUsr($mail)
+    {
+        $sentencia = $this->conexion->prepare("SELECT * FROM usuarios WHERE TRIM(LOWER(mail)) = TRIM(LOWER(?)) ");
+        $sentencia->bind_param("s", $mail);
+        $sentencia->execute();
+        $resultado = $sentencia->get_result();
+        $exists = ($resultado->num_rows > 0);
+
+        $sentencia->close();
+
+        return $exists;
+    }
+    public function verifyUsr($mail, $pass)
+    {
+        $sentencia = $this->conexion->prepare("SELECT * FROM usuarios WHERE TRIM(LOWER(mail)) = TRIM(LOWER(?)) LIMIT 1");
+        $sentencia->bind_param("s", $mail);
+        $sentencia->execute();
+        $resultado = $sentencia->get_result();
+        $sentencia->close();
+        $user = $resultado->fetch_assoc();
+        if ($user) {
+            if (password_verify($pass, $user['password'])) {
+                return $user;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+
     }
 
 

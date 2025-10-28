@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 ?>
 
 <!DOCTYPE html>
@@ -51,19 +49,19 @@ session_start();
             <div class="card-content pagar">
               <h5>Resumen de compra</h5>
               <div class="cont-resumen">
-                <p>Sub total:</p>
-                <p>$subtotal
+                <p>Total compra:</p>
+                <p>$ 0
                 </p>
               </div>
               <div class="cont-resumen">
                 <p>Envio:</p>
                 <p>
-                  <a class="calcular-envio" href="#">calcular envio</a>
+                  <a class="calcular-envio modal-trigger" href="#modal1">consultar envio</a>
                 </p>
               </div>
               <div class="cont-resumen">
                 <p>Total a pagar:</p>
-                <p>$1000 + envio</p>
+                <p>$ 0 + envio</p>
               </div>
               <a class="btn pagar" href="#">continuar compra</a>
             </div>
@@ -71,6 +69,26 @@ session_start();
         </div>
       </div>
     </div>
+
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Envios</h4>
+        <label for="">Provincia</label>
+        <select name="" id="">
+          <option value="">Capital Federal</option>
+          <option value="">Buenos Aires</option>
+          <option value="">CHubut</option>
+          <option value="">Jujuy</option>
+          <option value="">Mendoza</option>
+        </select>
+        <p>$ 2000</p>
+        <p>Los retiros por sucursal no tienen costos</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">ok</a>
+      </div>
+    </div>
+
 
   </main>
 
